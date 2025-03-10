@@ -19,6 +19,7 @@ EL_TYPE = struct(
 CL_TYPE = struct(
     op_node="op-node",
     hildr="hildr",
+    kona_node="kona-node",
 )
 
 CLIENT_TYPES = struct(
@@ -34,5 +35,6 @@ VOLUME_SIZE = {
         "op_reth_volume_size": 3000,  # 3GB
         "op_node_volume_size": 1000,  # 1GB
         "hildr_volume_size": 1000,  # 1GB
+        "kona_node_volume_size": 1000,  # 1GB
     },
 }

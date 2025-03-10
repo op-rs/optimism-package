@@ -242,12 +242,14 @@ optimism_package:
         # Valid values are:
         # op-node
         # hildr
+        # kona-node
         cl_type: op-node
 
         # The Docker image that should be used for the CL client; leave blank to use the default for the client type
         # Defaults by client:
         # - op-node: us-docker.pkg.dev/oplabs-tools-artifacts/images/op-node:develop
         # - hildr: ghcr.io/optimism-java/hildr:latest
+        # - kona-node: ghcr.io/op-rs/kona/kona-node:latest
         cl_image: ""
 
         # The log level string that this participant's CL client should log at
@@ -655,7 +657,7 @@ Compile [tx-fuzz](https://github.com/MariusVanDerWijden/tx-fuzz) locally per ins
 
 Install the latest [contender](https://github.com/flashbots/contender) version via cargo:
 ```bash
-cargo install --git https://github.com/flashbots/contender --bin contender --force 
+cargo install --git https://github.com/flashbots/contender --bin contender --force
 ```
 
 Browse the available [scenarios](https://github.com/flashbots/contender/tree/main/scenarios) and pick one that fits your needs. For example, to download the `stress` scenario:

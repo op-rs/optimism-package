@@ -19,6 +19,7 @@ op_besu = import_module("./el/op-besu/op_besu_launcher.star")
 # CL
 op_node = import_module("./cl/op-node/op_node_launcher.star")
 hildr = import_module("./cl/hildr/hildr_launcher.star")
+kona_node = import_module("./cl/kona-node/kona_node_launcher.star")
 
 # MEV
 rollup_boost = import_module("./mev/rollup-boost/rollup_boost_launcher.star")
@@ -127,6 +128,12 @@ def launch(
                 deployment_output, jwt_file, network_params
             ),
             "launch_method": hildr.launch,
+        },
+        "kona-node": {
+            "launcher": kona_node.new_kona_node_launcher(
+                deployment_output, jwt_file, network_params
+            ),
+            "launch_method": kona_node.launch,
         },
     }
 
