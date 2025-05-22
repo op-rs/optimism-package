@@ -57,6 +57,11 @@ def get_used_ports(discovery_port):
             ethereum_package_shared_utils.TCP_PROTOCOL,
             ethereum_package_shared_utils.HTTP_APPLICATION_PROTOCOL,
         ),
+        "tokio-console": ethereum_package_shared_utils.new_port_spec(
+            6669,
+            ethereum_package_shared_utils.TCP_PROTOCOL,
+            wait=None
+        ),
     }
     return used_ports
 
